@@ -19,7 +19,77 @@ export default function Home() {
       <ul>
         <li>
           <Link href="/chapter/one">
-            <a>About Us</a>
+            <a>Förberedelser</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/chapter/two">
+            <a>Väntan på taxi</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/chapter/three">
+            <a>Väntan på deltagare</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/chapter/four">
+            <a>Tina Anländer</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/chapter/five">
+            <a>Vigsel dags</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/chapter/six">
+            <a>Vigsel dags</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/chapter/seven">
+            <a>Vigsel dags</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/chapter/eight">
+            <a>Vigsel dags</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/chapter/nine">
+            <a>Vigsel dags</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/chapter/ten">
+            <a>Vigsel dags</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/chapter/eleven">
+            <a>Vigsel dags</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/chapter/twelve">
+            <a>Vigsel dags</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/chapter/thirteen">
+            <a>Vigsel dags</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/chapter/fourteen">
+            <a>Vigsel dags</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/chapter/fifteen">
+            <a>Vigsel dags</a>
           </Link>
         </li>
       </ul>

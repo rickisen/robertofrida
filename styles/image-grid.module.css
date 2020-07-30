@@ -20,8 +20,8 @@
 }
 
 .wideSmall {
-  grid-column: span 3;
-  grid-row: span 2;
+  grid-column: span 2;
+  grid-row: span 1;
 }
 
 .wide {
@@ -30,8 +30,8 @@
 }
 
 .wideLarge {
-  grid-column: span 5;
-  grid-row: span 4;
+  grid-column: span 8;
+  grid-row: span 6;
 }
 
 .portraitTiny {
@@ -40,8 +40,8 @@
 }
 
 .portraitSmall {
-  grid-column: span 2;
-  grid-row: span 3;
+  grid-column: span 3;
+  grid-row: span 2;
 }
 
 .portrait {
@@ -50,8 +50,8 @@
 }
 
 .portraitLarge {
-  grid-column: span 4;
-  grid-row: span 5;
+  grid-column: span 6;
+  grid-row: span 8;
 }
 
 @media (max-width: 800px) {

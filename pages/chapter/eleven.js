@@ -8,24 +8,10 @@ import filterImagesBetween from "./helpers";
 export default function() {
   return (
     <main className={styles.main}>
-      <h1>Förberedelser</h1>
+      <h1>???????</h1>
       <div className={imageStyles.grid}>
         {manifest.images
-          .filter(e => filterImagesBetween(1, 10, e))
-          .map(url => (
-            <ImageItem key={url} url={url} />
-          ))}{" "}
-      </div>
-      <div className={imageStyles.grid}>
-        {manifest.images
-          .filter(e => filterImagesBetween(11, 21, e))
-          .map(url => (
-            <ImageItem key={url} url={url} />
-          ))}{" "}
-      </div>
-      <div className={imageStyles.grid}>
-        {manifest.images
-          .filter(e => filterImagesBetween(22, 33, e))
+          .filter(e => filterImagesBetween(342, 370, e))
           .map(url => (
             <ImageItem key={url} url={url} />
           ))}{" "}
