@@ -13,6 +13,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .footer {
@@ -50,6 +52,10 @@
 }
 
 @media (max-width: 600px) {
+  .main {
+    padding: 5px;
+  }
+
   .grid {
     width: 100%;
     flex-direction: column;
