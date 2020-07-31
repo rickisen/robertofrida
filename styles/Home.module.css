@@ -51,7 +51,11 @@
   margin-top: 3rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 812px) {
+  .title {
+    font-size: 2em;
+  }
+
   .main {
     padding: 5px;
   }

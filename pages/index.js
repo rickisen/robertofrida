@@ -12,9 +12,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Välkommen till Roberts och Fridas Bröllopsbilder!
-        </h1>
+        <h1 className={styles.title}>Roberts och Fridas Bröllopsbilder!</h1>
       </main>
 
       <ul>
