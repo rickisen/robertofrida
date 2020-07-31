@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import styles from "../styles/slider.module.css";
 
 function scrollToImage(scrollContainer, index) {
@@ -22,9 +22,15 @@ function scrollToImage(scrollContainer, index) {
   }
 }
 
+function recalculateCurrentImage(scrollContainer, images) {
+  return Math.round(
+    (scrollContainer.current.scrollLeft / scrollContainer.current.scrollWidth) *
+      images.length
+  );
+}
+
 export default function ImageSlider({ images, index = 0 }) {
   const scrollContainer = useRef(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     scrollContainer.current.scrollLeft = Math.ceil(
@@ -32,21 +38,14 @@ export default function ImageSlider({ images, index = 0 }) {
     );
   }, [index, scrollContainer]);
 
-  const next = () => scrollToImage(scrollContainer, currentIndex + 1);
-  const previous = () => scrollToImage(scrollContainer, currentIndex - 1);
+  const next = () => {
+    const currentIndex = recalculateCurrentImage(scrollContainer, images);
+    scrollToImage(scrollContainer, currentIndex + 1);
+  };
 
-  const onScroll = () => {
-    setTimeout(
-      () =>
-        setCurrentIndex(
-          Math.floor(
-            (scrollContainer.current.scrollLeft /
-              scrollContainer.current.scrollWidth) *
-              images.length
-          )
-        ),
-      0
-    );
+  const previous = () => {
+    const currentIndex = recalculateCurrentImage(scrollContainer, images);
+    scrollToImage(scrollContainer, currentIndex - 1);
   };
 
   return (
@@ -55,11 +54,7 @@ export default function ImageSlider({ images, index = 0 }) {
         Föregående
       </button>
       <div>
-        <ul
-          onScroll={onScroll}
-          className={styles.scrollContainer}
-          ref={scrollContainer}
-        >
+        <ul className={styles.scrollContainer} ref={scrollContainer}>
           {images.map(url => (
             <li key={url}>
               <img src={url} />
