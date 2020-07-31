@@ -23,7 +23,6 @@
 .modal {
   position: relative;
   width: 100%;
-  max-width: 1200px;
   height: calc(100vh - 20px);
   transform: translateY(20rem);
   transition: transform 400ms ease-in-out;
