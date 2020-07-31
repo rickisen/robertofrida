@@ -42,10 +42,10 @@
   margin: 10px;
   transition: transform 200ms ease-in-out;
   color: white;
-  font-size: 10em;
 }
 .next:hover,
 .previous:hover {
+  text-decoration: underline;
   background: transparent;
   border: none;
   outline: none;

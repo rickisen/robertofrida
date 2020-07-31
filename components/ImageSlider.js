@@ -52,7 +52,7 @@ export default function ImageSlider({ images, index = 0 }) {
   return (
     <div className={styles.slider}>
       <button className={styles.previous} onClick={previous}>
-        {"<"}
+        Föregående
       </button>
       <div>
         <ul
@@ -68,7 +68,7 @@ export default function ImageSlider({ images, index = 0 }) {
         </ul>
       </div>
       <button className={styles.next} onClick={next}>
-        {">"}
+        Nästa
       </button>
     </div>
   );
