@@ -11,5 +11,9 @@
     "next": "9.5.1",
     "react": "16.13.1",
     "react-dom": "16.13.1"
+  },
+  "resolutions": {
+    "cssnano-preset-simple": "1.1.1",
+    "webpack": "4.43"
   }
 }
