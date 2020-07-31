@@ -54,17 +54,10 @@
 
 @media (max-width: 800px) {
   .grid {
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
-    grid-template-rows: repeat(auto-fill, 200px);
-  }
-}
-
-@media (max-width: 450px) {
-  .grid {
-    grid-template-columns: repeat(4, minmax(80px, 1fr));
+    grid-template-columns: repeat(4, minmax(75px, 1fr));
     grid-gap: 4px;
     margin: 2px;
-    grid-template-rows: repeat(auto-fill, 80px);
+    grid-template-rows: repeat(auto-fill, 75px);
   }
 
   .wideTiny {

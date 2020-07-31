@@ -1,38 +1,12 @@
 import React from "react";
-import styles from "../../styles/Home.module.css";
-import imageStyles from "../../styles/image-grid.module.css";
-import manifest from "../../image-manifest.json";
-import ImageItem from "../../components/imageItem";
-import filterImagesBetween, { sortImages } from "./helpers";
+import Chapter from "../../components/chapter";
 
-export default function() {
+export default function One() {
+  const title = "Förberedelser";
+  const imagesStart = 1;
+  const imagesEnd = 33;
+
   return (
-    <main className={styles.main}>
-      <h1>Förberedelser</h1>
-      <div className={imageStyles.grid}>
-        {manifest.images
-          .filter(e => filterImagesBetween(1, 10, e))
-          .sort(sortImages)
-          .map(url => (
-            <ImageItem key={url} url={url} />
-          ))}{" "}
-      </div>
-      <div className={imageStyles.grid}>
-        {manifest.images
-          .filter(e => filterImagesBetween(11, 21, e))
-          .sort(sortImages)
-          .map(url => (
-            <ImageItem key={url} url={url} />
-          ))}{" "}
-      </div>
-      <div className={imageStyles.grid}>
-        {manifest.images
-          .filter(e => filterImagesBetween(22, 33, e))
-          .sort(sortImages)
-          .map(url => (
-            <ImageItem key={url} url={url} />
-          ))}{" "}
-      </div>
-    </main>
+    <Chapter title={title} imagesStart={imagesStart} imagesEnd={imagesEnd} />
   );
 }

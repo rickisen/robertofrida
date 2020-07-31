@@ -6,10 +6,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <meta
-          name="viewport"
-          content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Robert och Frida | bröllopsbilder</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>

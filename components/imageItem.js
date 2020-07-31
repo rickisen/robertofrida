@@ -26,14 +26,14 @@ function mapToClassName(url) {
   }
 }
 
-export default function({ url, index, openInModal }) {
+export default function ImageItem({ url, openInModal }) {
   let open = () => {};
   if (typeof openInModal === "function") {
-    open = () => openInModal(index);
+    open = () => openInModal();
   }
 
   return (
-    <div onPress={open} className={mapToClassName(url)}>
+    <div onClick={open} className={mapToClassName(url)}>
       <img src={url} />
     </div>
   );
