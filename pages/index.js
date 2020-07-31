@@ -45,52 +45,52 @@ export default function Home() {
         </li>
         <li>
           <Link href="/chapter/six">
-            <a>Vigsel dags</a>
+            <a>Första bröllopsbilderna</a>
           </Link>
         </li>
         <li>
           <Link href="/chapter/seven">
-            <a>Vigsel dags</a>
+            <a>Tina och Porträtt</a>
           </Link>
         </li>
         <li>
           <Link href="/chapter/eight">
-            <a>Vigsel dags</a>
+            <a>Lämnar Stockholms Sjukhem</a>
           </Link>
         </li>
         <li>
           <Link href="/chapter/nine">
-            <a>Vigsel dags</a>
+            <a>Caliente och andra bror Fredrik</a>
           </Link>
         </li>
         <li>
           <Link href="/chapter/ten">
-            <a>Vigsel dags</a>
+            <a>Mot Blekholmsterassen</a>
           </Link>
         </li>
         <li>
           <Link href="/chapter/eleven">
-            <a>Vigsel dags</a>
+            <a>Bröllopsbilder på bron</a>
           </Link>
         </li>
         <li>
           <Link href="/chapter/twelve">
-            <a>Vigsel dags</a>
+            <a>Bröllopsbilder vid vattnet</a>
           </Link>
         </li>
         <li>
           <Link href="/chapter/thirteen">
-            <a>Vigsel dags</a>
+            <a>Förfika innan middag</a>
           </Link>
         </li>
         <li>
           <Link href="/chapter/fourteen">
-            <a>Vigsel dags</a>
+            <a>Middag på balkongen</a>
           </Link>
         </li>
         <li>
           <Link href="/chapter/fifteen">
-            <a>Vigsel dags</a>
+            <a>Natt och hej då</a>
           </Link>
         </li>
       </ul>

@@ -2,7 +2,7 @@ import React from "react";
 import Chapter from "../../components/chapter";
 
 export default function Nine() {
-  const title = "Förberedelser";
+  const title = "Caliente och andra bror Fredrik";
   const imagesStart = 286;
   const imagesEnd = 321;
 

@@ -2,7 +2,7 @@ import React from "react";
 import Chapter from "../../components/chapter";
 
 export default function Ten() {
-  const title = "Förberedelser";
+  const title = "Mot Blekholmsterassen";
   const imagesStart = 322;
   const imagesEnd = 341;
 

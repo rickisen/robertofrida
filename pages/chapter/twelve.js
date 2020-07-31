@@ -2,7 +2,7 @@ import React from "react";
 import Chapter from "../../components/chapter";
 
 export default function Twelve() {
-  const title = "Förberedelser";
+  const title = "Bröllopsbilder vid vattnet";
   const imagesStart = 371;
   const imagesEnd = 390;
 

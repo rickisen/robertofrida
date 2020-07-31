@@ -2,7 +2,7 @@ import React from "react";
 import Chapter from "../../components/chapter";
 
 export default function Five() {
-  const title = "Förberedelser";
+  const title = "Efter Vigseln";
   const imagesStart = 114;
   const imagesEnd = 161;
 

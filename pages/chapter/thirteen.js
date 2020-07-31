@@ -2,7 +2,7 @@ import React from "react";
 import Chapter from "../../components/chapter";
 
 export default function Thirteen() {
-  const title = "Förberedelser";
+  const title = "Förfika innan middag";
   const imagesStart = 391;
   const imagesEnd = 412;
 

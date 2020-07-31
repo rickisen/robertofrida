@@ -52,7 +52,7 @@
   grid-row: span 8;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 812px) {
   .grid {
     grid-template-columns: repeat(4, minmax(75px, 1fr));
     grid-gap: 4px;

@@ -65,7 +65,7 @@
 .close:active {
   transform: scale(0.8) translateY(3px);
 }
-@media (max-width: 800px) {
+@media (max-width: 812px) {
   .close,
   .close:hover,
   .close:active,
