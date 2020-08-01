@@ -1,5 +1,6 @@
 import React from "react";
 import imageStyles from "../styles/image-grid.module.css";
+import LazyImg from "./lazyImg";
 
 /**
  * @param {string} url
@@ -32,9 +33,18 @@ export default function ImageItem({ url, openInModal }) {
     open = () => openInModal();
   }
 
+  const className = mapToClassName(url);
+
+  let sizedUrl = url;
+  if (className.includes("Large")) {
+    sizedUrl = url.replace("images/", "images-medium/");
+  } else {
+    sizedUrl = url.replace("images/", "images-mini/");
+  }
+
   return (
-    <div onClick={open} className={mapToClassName(url)}>
-      <img src={url} />
+    <div onClick={open} className={className}>
+      <LazyImg src={sizedUrl} />
     </div>
   );
 }

@@ -12,8 +12,8 @@ for image in public/images/*/*; do
   mv $image "$( echo "$image""$postfix" | sed 's?\.jpg??g' ).jpg"
 done
 
-echo '{ "images": [""' > image-manifest.json
-for img in public/images/*/*; do
-  echo ",\"/$img\"" >> image-manifest.json
-done
-echo ']}' >> image-manifest.json
+# echo '{ "images": [""' > image-manifest.json
+# for img in public/images/*/*; do
+#   echo ",\"/$img\"" >> image-manifest.json
+# done
+# echo ']}' >> image-manifest.json

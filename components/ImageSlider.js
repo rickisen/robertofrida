@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import styles from "../styles/slider.module.css";
+import LazyImg from "./lazyImg";
 
 function scrollToImage(scrollContainer, index) {
   if (scrollContainer.current) {
@@ -57,7 +58,7 @@ export default function ImageSlider({ images, index = 0 }) {
         <ul className={styles.scrollContainer} ref={scrollContainer}>
           {images.map(url => (
             <li key={url}>
-              <img src={url} />
+              <LazyImg src={url} initialSrc={"/spinner-2.gif"} />
             </li>
           ))}
         </ul>

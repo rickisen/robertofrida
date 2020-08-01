@@ -5,6 +5,9 @@
   grid-auto-flow: dense;
   grid-template-rows: repeat(auto-fill, 100px);
 }
+.grid > * {
+  min-height: 100px;
+}
 
 .grid img {
   width: 100%;
@@ -58,6 +61,9 @@
     grid-gap: 4px;
     margin: 2px;
     grid-template-rows: repeat(auto-fill, 75px);
+  }
+  .grid > * {
+    min-height: 75px;
   }
 
   .wideTiny {
