@@ -16,13 +16,18 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+.main header {
+  text-align: left;
+  align-self: flex-start;
+}
 
 .footer {
   width: 100%;
   height: 100px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 10px;
 }
 
 .title {

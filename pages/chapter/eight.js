@@ -7,6 +7,12 @@ export default function Eight() {
   const imagesEnd = 285;
 
   return (
-    <Chapter title={title} imagesStart={imagesStart} imagesEnd={imagesEnd} />
+    <Chapter
+      title={title}
+      imagesStart={imagesStart}
+      imagesEnd={imagesEnd}
+      nextChapter="/chapter/nine"
+      prevChapter="/chapter/six"
+    />
   );
 }

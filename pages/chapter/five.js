@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Head from "next/head";
+import Link from "next/link";
 
 import styles from "../../styles/Home.module.css";
 import imageStyles from "../../styles/image-grid.module.css";
@@ -13,6 +14,8 @@ export default function Five() {
   const title = "Efter Vigseln";
   const imagesStart = 114;
   const imagesEnd = 161;
+  const prevChapter = "/chapter/four";
+  const nextChapter = "/chapter/six";
 
   const [openModal, setOpenModal] = useState(false);
   const [target, setTarget] = useState(0);
@@ -36,6 +39,12 @@ export default function Five() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <header>
+        <Link href={"/"}>
+          <a>Start</a>
+        </Link>
+      </header>
+
       <h1>{title}</h1>
       <Modal open={openModal} setOpen={setOpenModal}>
         <ImageSlider images={images} index={target} />
@@ -52,6 +61,14 @@ export default function Five() {
           />
         ))}
       </div>
+      <footer className={styles.footer}>
+        <Link href={prevChapter}>
+          <a>Föregående</a>
+        </Link>
+        <Link href={nextChapter}>
+          <a>Nästa</a>
+        </Link>
+      </footer>
     </main>
   );
 }

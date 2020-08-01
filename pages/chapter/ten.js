@@ -7,6 +7,12 @@ export default function Ten() {
   const imagesEnd = 341;
 
   return (
-    <Chapter title={title} imagesStart={imagesStart} imagesEnd={imagesEnd} />
+    <Chapter
+      title={title}
+      imagesStart={imagesStart}
+      imagesEnd={imagesEnd}
+      prevChapter="/chapter/nine"
+      nextChapter="/chapter/eleven"
+    />
   );
 }

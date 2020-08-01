@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Head from "next/head";
+import Link from "next/link";
 
 import styles from "../styles/Home.module.css";
 import imageStyles from "../styles/image-grid.module.css";
@@ -9,7 +10,13 @@ import ImageItem from "./imageItem";
 import Modal from "./Modal";
 import ImageSlider from "./ImageSlider";
 
-export default function Chapter({ title, imagesStart, imagesEnd }) {
+export default function Chapter({
+  title,
+  imagesStart,
+  imagesEnd,
+  nextChapter = "/",
+  prevChapter = "/"
+}) {
   const [openModal, setOpenModal] = useState(false);
   const [target, setTarget] = useState(0);
   const images = manifest.images
@@ -23,6 +30,11 @@ export default function Chapter({ title, imagesStart, imagesEnd }) {
         <title>{"Robert och Frida | bröllopsbilder | " + title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <header>
+        <Link href={"/"}>
+          <a>Start</a>
+        </Link>
+      </header>
 
       <h1>{title}</h1>
       <Modal open={openModal} setOpen={setOpenModal}>
@@ -40,6 +52,14 @@ export default function Chapter({ title, imagesStart, imagesEnd }) {
           />
         ))}
       </div>
+      <footer className={styles.footer}>
+        <Link href={prevChapter}>
+          <a>{prevChapter === "/" ? "Start" : "Föregående"}</a>
+        </Link>
+        <Link href={nextChapter}>
+          <a>{nextChapter === "/" ? "Start" : "Nästa"}</a>
+        </Link>
+      </footer>
     </main>
   );
 }

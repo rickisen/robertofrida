@@ -7,6 +7,12 @@ export default function Fifteen() {
   const imagesEnd = 493;
 
   return (
-    <Chapter title={title} imagesStart={imagesStart} imagesEnd={imagesEnd} />
+    <Chapter
+      title={title}
+      imagesStart={imagesStart}
+      imagesEnd={imagesEnd}
+      prevChapter="/chapter/fourteen"
+      nextChapter="/"
+    />
   );
 }

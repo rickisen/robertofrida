@@ -7,6 +7,12 @@ export default function Two() {
   const imagesEnd = 50;
 
   return (
-    <Chapter title={title} imagesStart={imagesStart} imagesEnd={imagesEnd} />
+    <Chapter
+      title={title}
+      imagesStart={imagesStart}
+      imagesEnd={imagesEnd}
+      prevChapter="/chapter/one"
+      nextChapter="/chapter/three"
+    />
   );
 }

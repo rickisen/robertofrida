@@ -7,6 +7,12 @@ export default function Three() {
   const imagesEnd = 86;
 
   return (
-    <Chapter title={title} imagesStart={imagesStart} imagesEnd={imagesEnd} />
+    <Chapter
+      title={title}
+      imagesStart={imagesStart}
+      imagesEnd={imagesEnd}
+      prevChapter="/chapter/two"
+      nextChapter="/chapter/four"
+    />
   );
 }

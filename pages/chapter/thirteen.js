@@ -7,6 +7,12 @@ export default function Thirteen() {
   const imagesEnd = 412;
 
   return (
-    <Chapter title={title} imagesStart={imagesStart} imagesEnd={imagesEnd} />
+    <Chapter
+      title={title}
+      imagesStart={imagesStart}
+      imagesEnd={imagesEnd}
+      prevChapter="/chapter/twelve"
+      nextChapter="/chapter/fourteen"
+    />
   );
 }
