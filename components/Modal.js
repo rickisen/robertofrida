@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/modal.module.css";
 
 export default function Modal({ open, setOpen, children }) {
-  const close = e => {
+  const close = (e) => {
     if (e.target === e.currentTarget) {
       setOpen(false);
     }

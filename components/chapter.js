@@ -15,12 +15,12 @@ export default function Chapter({
   imagesStart,
   imagesEnd,
   nextChapter = "/",
-  prevChapter = "/"
+  prevChapter = "/",
 }) {
   const [openModal, setOpenModal] = useState(false);
   const [target, setTarget] = useState(0);
   const images = manifest.images
-    .filter(e => filterImagesBetween(imagesStart, imagesEnd, e))
+    .filter((e) => filterImagesBetween(imagesStart, imagesEnd, e))
     .sort(sortImages);
 
   return (
@@ -38,7 +38,11 @@ export default function Chapter({
 
       <h1>{title}</h1>
       <Modal open={openModal} setOpen={setOpenModal}>
-        <ImageSlider images={images} index={target} />
+        <ImageSlider
+          images={images}
+          index={target}
+          onClickOutside={() => setOpenModal(false)}
+        />
       </Modal>
       <div className={imageStyles.grid}>
         {images.map((url, index) => (

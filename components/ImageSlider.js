@@ -9,7 +9,7 @@ function scrollToImage(scrollContainer, index) {
         scrollContainer.current.scrollTo({
           top: 0,
           left: scrollContainer.current.clientWidth * index,
-          behavior: "smooth"
+          behavior: "smooth",
         });
       } catch (e) {
         scrollContainer.current.scrollTo(
@@ -30,7 +30,11 @@ function recalculateCurrentImage(scrollContainer, images) {
   );
 }
 
-export default function ImageSlider({ images, index = 0 }) {
+export default function ImageSlider({
+  images,
+  onClickOutside = () => {},
+  index = 0,
+}) {
   const scrollContainer = useRef(null);
 
   useEffect(() => {
@@ -39,6 +43,11 @@ export default function ImageSlider({ images, index = 0 }) {
     );
   }, [index, scrollContainer]);
 
+  const clickOutside = (e) => {
+    if (e.target === e.currentTarget) {
+      onClickOutside();
+    }
+  };
   const next = () => {
     const currentIndex = recalculateCurrentImage(scrollContainer, images);
     scrollToImage(scrollContainer, currentIndex + 1);
@@ -50,15 +59,15 @@ export default function ImageSlider({ images, index = 0 }) {
   };
 
   return (
-    <div className={styles.slider}>
+    <div onClick={clickOutside} className={styles.slider}>
       <button className={styles.previous} onClick={previous}>
         Föregående
       </button>
       <div>
         <ul className={styles.scrollContainer} ref={scrollContainer}>
-          {images.map(url => (
-            <li key={url}>
-              <LazyImg src={url} initialSrc={"/spinner-2.gif"} />
+          {images.map((url) => (
+            <li onClick={clickOutside} key={url}>
+              <LazyImg src={url} initialSrc={"/spinner-dark.svg"} />
             </li>
           ))}
         </ul>
