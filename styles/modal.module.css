@@ -49,34 +49,23 @@
   right: 0;
   color: white;
   z-index: 101;
+  cursor: pointer;
 }
 .close:hover {
   /* background: transparent; */
   /* border: none; */
   /* outline: none; */
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .close:focus {
   /* background: transparent; */
   /* border: none; */
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .close:active {
   transform: scale(0.8) translateY(3px);
 }
-@media (max-width: 812px) {
-  .close,
-  .close:hover,
-  .close:active,
-  .close:focus {
-    background: white;
-    border-radius: 50%;
-    color: black;
-    height: 40px;
-    width: 40px;
-    padding: 0;
-    bottom: 50px;
-    right: 10px;
-    top: unset;
-  }
+.close img {
+  width: 50px;
+  height: 50px;
 }

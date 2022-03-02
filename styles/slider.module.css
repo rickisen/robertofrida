@@ -33,15 +33,30 @@
   scrollbar-width: none; /* Firefox */
 }
 
+.previous {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+
 .next,
 .previous {
   background: transparent;
+  position: absolute;
   border: none;
   outline: none;
   padding: 10px;
   margin: 10px;
   transition: transform 200ms ease-in-out;
   color: white;
+  cursor: pointer;
+  z-index: 101;
+}
+.next img,
+.previous img {
+  width: 50px;
+  height: 50px;
 }
 .next:hover,
 .previous:hover {
@@ -49,7 +64,7 @@
   background: transparent;
   border: none;
   outline: none;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .next:focus,
 .previous:focus,
@@ -74,7 +89,7 @@
   align-items: center;
 }
 
-.slider img {
+.slider li img {
   max-width: 100%;
   max-height: 100%;
   min-width: 200px;

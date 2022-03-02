@@ -19,7 +19,7 @@ export default function Modal({ open, setOpen, children }) {
     >
       <div className={open ? styles.modal + " " + styles.show : styles.modal}>
         <button onClick={() => setOpen(false)} className={styles.close}>
-          Stäng
+          <img src="/md-close.svg" alt="close" />
         </button>
         <div>{children}</div>
       </div>

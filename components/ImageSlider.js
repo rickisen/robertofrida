@@ -61,7 +61,7 @@ export default function ImageSlider({
   return (
     <div onClick={clickOutside} className={styles.slider}>
       <button className={styles.previous} onClick={previous}>
-        Föregående
+        <img src="/md-arrow-back.svg" alt="previous" />
       </button>
       <div>
         <ul className={styles.scrollContainer} ref={scrollContainer}>
@@ -73,7 +73,7 @@ export default function ImageSlider({
         </ul>
       </div>
       <button className={styles.next} onClick={next}>
-        Nästa
+        <img src="/md-arrow-forward.svg" alt="next" />
       </button>
     </div>
   );

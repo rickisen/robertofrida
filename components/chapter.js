@@ -32,7 +32,13 @@ export default function Chapter({
       </Head>
       <header>
         <Link href={"/"}>
-          <a>Start</a>
+          <a>
+            <img
+              style={{ width: "50px", height: "50px" }}
+              src="/md-home.svg"
+              alt="home"
+            />
+          </a>
         </Link>
       </header>
 
